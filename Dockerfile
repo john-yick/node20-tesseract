@@ -10,7 +10,14 @@ RUN  echo 'http://mirrors.ustc.edu.cn/alpine/v3.15/main' > /etc/apk/repositories
     && echo "Asia/Shanghai" > /etc/timezone
 
 # Node Canvas
-RUN apk add --allow-untrusted make g++ cairo-dev libjpeg-turbo-dev pango-dev giflib-dev
+RUN apk add --allow-untrusted make 
+RUN apk add --allow-untrusted cairo-dev 
+RUN apk add --allow-untrusted g++ 
+RUN apk add --allow-untrusted libjpeg-turbo-dev 
+RUN apk add --allow-untrusted pango-dev 
+RUN apk add --allow-untrusted giflib-dev 
+RUN apk add --allow-untrusted build-base
+
 
 #Thumbnail generator dependencies
 RUN apk add --allow-untrusted libreoffice
